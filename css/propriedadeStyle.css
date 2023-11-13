@@ -77,13 +77,34 @@ a:visited {
     text-decoration: none
 }
 
-.index-cursos{
+.titulo-propriedade{
     display: flex;
-    flex-direction: row;
     align-items: center;
-
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-left: 250px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
-.card-curso{
-    border: 1px solid black;
+.botoes{
+    width: 84%;
+    display: flex;
+    margin-left: 240px;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.botao-editar-novo{
+    display: flex;
+    margin: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    text-decoration: none
+    
 }

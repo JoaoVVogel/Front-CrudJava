@@ -6,8 +6,6 @@ async function cursos(){
     });
 
     const data = await result.json();
-    console.log(result)
-    console.log(data)
 
     const cardCursos = document.getElementById("card-cursos");
     const cursosInfo = data;
@@ -18,13 +16,33 @@ async function cursos(){
 
         const nomeCurso = document.createElement("h1");
         nomeCurso.classList.add("titulo-curso");
-        nomeCurso.innerText=curso.nome;
+        nomeCurso.innerText = curso.nome;
 
         const tipoCurso = document.createElement("h2");
         tipoCurso.classList.add("tipo-curso");
-        tipoCurso.innerText=curso.titulo;
+        tipoCurso.innerText = "Tipo: " + curso.tipo;
 
-        card.appendChild(nomeCurso)
+        const instrutorCurso = document.createElement("h2");
+        instrutorCurso.classList.add("instrutor-curso");
+        instrutorCurso.innerText = "Instrutor: " + curso.instrutor;
+
+        const statusCurso = document.createElement("div");
+
+        if(curso.statusCurso != 1){
+            statusCurso.classList.add("status-curso-encerrado");
+            statusCurso.innerText = "indisponivel";
+
+        }else{
+            statusCurso.classList.add("status-curso");
+            statusCurso.innerText = "Em andamento";
+
+        }
+        
+
+        card.appendChild(nomeCurso);
+        card.appendChild(tipoCurso);
+        card.appendChild(instrutorCurso);
+        card.appendChild(statusCurso);
     
         cardCursos.appendChild(card);
     });
