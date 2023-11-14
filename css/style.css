@@ -8,30 +8,47 @@ body{
     color: black;
 }
 
+.index{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+
+}
+
+.conteudo-index{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
 .h1-index{
-    margin-top: 180px;
-    margin-left: 200px;
+    display: flex;
     text-align: center;
 
 }
 
-.h2-index{
-    margin-left: 200px;
+.h2-integrantes{
+    display: flex;
     text-align: center;
-
 }
 
+.h2-professor{
+    display: flex;
+    text-align: center;
+}
 
 
 .sidebar{
     background-color: rgba(39, 60, 78, 1);
-    position: fixed;
-    top: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     width: 240px;
-    height: 100%;
+    height: 100vh;
     padding: 40px 10px 30px 10px;
     border-right: 1px solid black;
 }
