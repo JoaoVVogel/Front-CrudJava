@@ -1,6 +1,6 @@
-const endpointCurso = "http://18.227.26.15:8080/api/curso";
-
 async function cursos(){
+    const endpointCurso = "http://18.227.26.15:8080/api/curso";
+    
     const result = await fetch(endpointCurso, {
         method: "GET"
     });
@@ -35,10 +35,8 @@ async function cursos(){
         }else{
             statusCurso.classList.add("status-curso");
             statusCurso.innerText = "Em andamento";
-
         }
         
-
         card.appendChild(nomeCurso);
         card.appendChild(tipoCurso);
         card.appendChild(instrutorCurso);

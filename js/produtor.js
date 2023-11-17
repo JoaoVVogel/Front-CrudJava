@@ -1,6 +1,7 @@
-const endpointProdutor = "http://18.227.26.15:8080/api/produtor";
 
 async function produtores(){
+    const endpointProdutor = "http://3.136.11.244:8080/api/produtor";
+    
     const result = await fetch(endpointProdutor, {
         method: "GET"
     });
