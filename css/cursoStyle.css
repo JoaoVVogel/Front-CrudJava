@@ -118,6 +118,8 @@ a:visited {
     color: #ffff;
     font-family: sans-serif;
     border-radius: 15px;
+    text-align: center;
+    width: 180px;
     margin: 10px;
     padding: 10px 20px 10px 20px;
 }
@@ -128,6 +130,8 @@ a:visited {
     color: #ffff;
     font-family: sans-serif;
     border-radius: 15px;
+    text-align: center;
+    width: 180px;
     margin: 10px;
     padding: 10px 20px 10px 20px;
 }
@@ -139,6 +143,10 @@ a:visited {
     justify-content: center;
     position: fixed;
     bottom: 0;
+}
+
+.botoes a {
+    text-decoration: none;
 }
 
 .botao-editar-novo{

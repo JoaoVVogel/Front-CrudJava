@@ -1,5 +1,5 @@
 async function cursos(){
-    const endpointCurso = "http://18.227.26.15:8080/api/curso";
+    const endpointCurso = "http://3.136.11.244:8080/api/curso";
     
     const result = await fetch(endpointCurso, {
         method: "GET"

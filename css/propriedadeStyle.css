@@ -8,30 +8,29 @@ body{
     color: black;
 }
 
-.h1-index{
-    margin-top: 180px;
-    margin-left: 200px;
-    text-align: center;
+.index{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
 
 }
 
-.h2-index{
-    margin-left: 200px;
-    text-align: center;
-
+.conteudo-index{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+     
 }
-
-
 
 .sidebar{
     background-color: rgba(39, 60, 78, 1);
-    position: fixed;
-    top: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 240px;
-    height: 100%;
+    height: 100vh;
     padding: 40px 10px 30px 10px;
     border-right: 1px solid black;
 }
@@ -79,23 +78,34 @@ a:visited {
 
 .titulo-propriedade{
     display: flex;
-    align-items: center;
+    width: 95%;
     justify-content: center;
     border: 2px solid black;
     border-radius: 15px;
-    margin-left: 250px;
     padding: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin: 10px;
+}
+
+.card-individual{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 100px;
+    text-align: center;
 }
 
 .botoes{
-    width: 84%;
+    width: 100%;
     display: flex;
-    margin-left: 240px;
+    align-items: center;
     justify-content: center;
-    position: fixed;
-    bottom: 0;
+}
+
+.botoes a{
+    text-decoration: none;
 }
 
 .botao-editar-novo{
@@ -105,6 +115,6 @@ a:visited {
     background-color: white;
     cursor: pointer;
     border-radius: 15px;
-    text-decoration: none
+    text-decoration: none;
     
 }

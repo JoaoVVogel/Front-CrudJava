@@ -7,8 +7,6 @@ async function produtores(){
     });
 
     const data = await result.json();
-    console.log(result)
-    console.log(data)
 
     const cardProdutores = document.getElementById("card-produtores");
     const cursosInfo = data;
@@ -21,6 +19,9 @@ async function produtores(){
         cardIndividual.classList.add("card-individual");
 
         card.appendChild(cardIndividual);
+
+        const idProdutor = document.createElement("p");
+        idProdutor.innerText = "ID: " + produtor.id;
 
         const nomeProdutor = document.createElement("p");
         nomeProdutor.innerText = "Produtor: " + produtor.nome;
@@ -44,6 +45,7 @@ async function produtores(){
 
         }
 
+        cardIndividual.appendChild(idProdutor);
         cardIndividual.appendChild(nomeProdutor);
         cardIndividual.appendChild(cnpjProdutor);
         cardIndividual.appendChild(statusProdutor);
