@@ -53,6 +53,7 @@ async function produtores(){
         card.appendChild(cardIndividual);
 
         cardProdutores.appendChild(card);
+        
     });
 }
 produtores();

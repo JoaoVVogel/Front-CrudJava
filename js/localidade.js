@@ -1,1 +1,1 @@
-const endpointLocalidade = "";
+const endpointLocalidade = "http://3.136.11.244:8080/api/localidade";
