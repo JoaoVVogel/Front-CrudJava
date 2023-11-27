@@ -8,30 +8,30 @@ body{
     color: black;
 }
 
-.h1-index{
-    margin-top: 180px;
-    margin-left: 200px;
-    text-align: center;
+.index{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
 
 }
 
-.h2-index{
-    margin-left: 200px;
-    text-align: center;
-
+.conteudo-index{
+    /* border: 5px solid black; */
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    
 }
-
-
 
 .sidebar{
     background-color: rgba(39, 60, 78, 1);
-    position: fixed;
-    top: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 240px;
-    height: 100%;
+    height: 100vh;
     padding: 40px 10px 30px 10px;
     border-right: 1px solid black;
     
@@ -80,24 +80,22 @@ a:visited {
 
 .titulo-cursos{
     display: flex;
-    align-items: center;
+    width: 95%;
     justify-content: center;
     border: 2px solid black;
     border-radius: 15px;
-    margin-left: 250px;
     padding: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 
 .index-cursos{ 
     /* border: 1px solid black; */
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
     justify-content: space-around;
-    margin-left: 240px;
     flex-direction: row;
 
 }
@@ -108,6 +106,7 @@ a:visited {
     flex-direction: column;
     align-items: center;
     width: 400px;
+    height: 300px;
     border: 1px solid black;
     border-radius: 15px;
 }
@@ -134,28 +133,4 @@ a:visited {
     width: 180px;
     margin: 10px;
     padding: 10px 20px 10px 20px;
-}
-
-.botoes{
-    width: 84%;
-    display: flex;
-    margin-left: 240px;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-}
-
-.botoes a {
-    text-decoration: none;
-}
-
-.botao-editar-novo{
-    display: flex;
-    margin: 20px;
-    padding: 10px 20px 10px 20px;
-    background-color: white;
-    cursor: pointer;
-    border-radius: 15px;
-    text-decoration: none
-    
 }

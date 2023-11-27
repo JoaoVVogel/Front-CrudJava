@@ -5,8 +5,6 @@ async function propriedades(){
     });
 
     const data = await result.json();
-    console.log(result)
-    console.log(data)
 
     const cardPropriedades = document.getElementById("card-propriedades");
     const propriedadesInfo = data;
