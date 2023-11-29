@@ -1,4 +1,4 @@
-async function cursos() {
+async function certificados() {
   const endpointCertificado = "http://3.136.11.244:8080/api/certificado";
   const result = await fetch(endpointCertificado, {
     method: "GET",
@@ -43,4 +43,4 @@ async function cursos() {
     cardCertificados.appendChild(card);
   });
 }
-certificado();
+certificados();
