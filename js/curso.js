@@ -1,48 +1,47 @@
-async function cursos(){
-    const endpointCurso = "http://3.136.11.244:8080/api/curso";
-    
-    const result = await fetch(endpointCurso, {
-        method: "GET"
-    });
+async function cursos() {
+  const endpointCurso = "http://3.136.11.244:8080/api/curso";
 
-    const data = await result.json();
+  const result = await fetch(endpointCurso, {
+    method: "GET",
+  });
 
-    const cardCursos = document.getElementById("card-cursos");
-    const cursosInfo = data;
+  const data = await result.json();
 
-    cursosInfo.forEach(curso => {
-        const card = document.createElement("div");
-        card.classList.add("card-curso");
+  const cardCursos = document.getElementById("card-cursos");
+  const cursosInfo = data;
 
-        const nomeCurso = document.createElement("h1");
-        nomeCurso.classList.add("titulo-curso");
-        nomeCurso.innerText = curso.nome;
+  cursosInfo.forEach((curso) => {
+    const card = document.createElement("div");
+    card.classList.add("card-curso");
 
-        const tipoCurso = document.createElement("h2");
-        tipoCurso.classList.add("tipo-curso");
-        tipoCurso.innerText = "Tipo: " + curso.tipo;
+    const nomeCurso = document.createElement("h1");
+    nomeCurso.classList.add("titulo-curso");
+    nomeCurso.innerText = curso.nome;
 
-        const instrutorCurso = document.createElement("h2");
-        instrutorCurso.classList.add("instrutor-curso");
-        instrutorCurso.innerText = "Instrutor: " + curso.instrutor;
+    const tipoCurso = document.createElement("h2");
+    tipoCurso.classList.add("tipo-curso");
+    tipoCurso.innerText = "Tipo: " + curso.tipo;
 
-        const statusCurso = document.createElement("div");
+    const instrutorCurso = document.createElement("h2");
+    instrutorCurso.classList.add("instrutor-curso");
+    instrutorCurso.innerText = "Instrutor: " + curso.instrutor;
 
-        if(curso.statusCurso != 1){
-            statusCurso.classList.add("status-curso-encerrado");
-            statusCurso.innerText = "indisponivel";
+    const statusCurso = document.createElement("div");
 
-        }else{
-            statusCurso.classList.add("status-curso");
-            statusCurso.innerText = "Em andamento";
-        }
-        
-        card.appendChild(nomeCurso);
-        card.appendChild(tipoCurso);
-        card.appendChild(instrutorCurso);
-        card.appendChild(statusCurso);
-    
-        cardCursos.appendChild(card);
-    });
+    if (curso.statusCurso != 1) {
+      statusCurso.classList.add("status-curso-encerrado");
+      statusCurso.innerText = "indisponivel";
+    } else {
+      statusCurso.classList.add("status-curso");
+      statusCurso.innerText = "Em andamento";
+    }
+
+    card.appendChild(nomeCurso);
+    card.appendChild(tipoCurso);
+    card.appendChild(instrutorCurso);
+    card.appendChild(statusCurso);
+
+    cardCursos.appendChild(card);
+  });
 }
 cursos();
